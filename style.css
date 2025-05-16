@@ -937,6 +937,9 @@
     }
     .body-content-container {
         flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        row-gap: 1rem;
     }
     .status-section-container {
         width: 100%;
