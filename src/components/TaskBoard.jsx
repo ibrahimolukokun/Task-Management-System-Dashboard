@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TaskCard from './TaskCard';
+import ProfileImage from '../assets/images/Profile-picture.png';
 
 const TaskBoard = () => {
   const [activeTab, setActiveTab] = useState('Board'); // State to manage active tab
@@ -10,7 +11,7 @@ const TaskBoard = () => {
       category: 'Design',
       priority: 'Medium',
       dueDate: '25 October',
-      assignees: ['/src/assets/images/Profile-picture.png', '/src/assets/images/Profile-picture.png'],
+      assignees: [ProfileImage, ProfileImage],
       status: 'To-Do',
       projectName: 'Project Alpha',
       description: 'Mapping the customer journey to identify pain points and opportunities for improvement.',
@@ -20,7 +21,7 @@ const TaskBoard = () => {
       category: 'Development',
       priority: 'Medium',
       dueDate: '21 October',
-      assignees: ['/src/assets/images/Profile-picture.png', '/src/assets/images/Profile-picture.png'],
+      assignees: [ProfileImage, ProfileImage],
       status: 'In Progress',
       projectName: 'Project X',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur provident libero nam!',
@@ -30,7 +31,7 @@ const TaskBoard = () => {
       category: 'Design',
       priority: 'High',
       dueDate: '17 October',
-      assignees: ['/src/assets/images/Profile-picture.png', '/src/assets/images/Profile-picture.png', '/src/assets/images/Profile-picture.png'],
+      assignees: [ProfileImage, ProfileImage, ProfileImage],
       status: 'Done',
       projectName: 'Design Lab',
       description: 'Redesigning the website for Design Lab to enhance usability and visual appeal.',
@@ -40,7 +41,7 @@ const TaskBoard = () => {
       category: '3D Modeling',
       priority: 'Low',
       dueDate: '30 October',
-      assignees: ['/src/assets/images/Profile-picture.png'],
+      assignees: [ProfileImage],
       status: 'To-Do',
       projectName: '3D Studio',
       description: 'Creating a detailed 3D model for the upcoming product launch.',
@@ -50,7 +51,7 @@ const TaskBoard = () => {
       category: 'Marketing',
       priority: 'High',
       dueDate: '15 October',
-      assignees: ['/src/assets/images/Profile-picture.png', '/src/assets/images/Profile-picture.png'],
+      assignees: [ProfileImage, ProfileImage],
       status: 'In Progress',
       projectName: 'Marketing Team',
       description: 'Planning and executing a social media campaign to boost brand awareness.',
@@ -60,7 +61,7 @@ const TaskBoard = () => {
       category: 'Development',
       priority: 'Medium',
       dueDate: '28 October',
-      assignees: ['/src/assets/images/Profile-picture.png'],
+      assignees: [ProfileImage],
       status: 'Done',
       projectName: 'SEO Project',
       description: 'Optimizing the website for search engines to improve visibility and traffic.',
