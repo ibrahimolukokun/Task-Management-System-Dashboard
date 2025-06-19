@@ -76,7 +76,7 @@ const TaskBoard = () => {
   return (
     <div className="flex flex-col p-3">
       {/* Tabs Section */}
-      <div className="flex items-center mb-6 border-b border-gray-200">
+      <div className="flex flex-wrap items-center mb-6 border-b border-gray-200">
         {['Board', 'Table', 'Calendar'].map((tab) => (
           <button
             key={tab}
@@ -109,7 +109,7 @@ const TaskBoard = () => {
 
       {/* Content Section */}
       {activeTab === 'Board' && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* To-Do Section */}
           <div className="bg-purple-50 p-4 rounded-xl space-y-4">
             <div className="flex justify-between items-center mb-4">

@@ -7,28 +7,31 @@ import designIcon from '../assets/images/circle-small-do-svgrepo-com.svg';
 import modelingIcon from '../assets/images/circle-small-3D-svgrepo-com.svg';
 import 'remixicon/fonts/remixicon.css';
 
-
-const Sidebar = () => {
+const Sidebar = ({ isSidebarVisible }) => {
     return (
-        <div className="w-72 bg-[#FAF9F8] h-screen flex flex-col border-r border-gray-200">
-            /* Logo and Search */
-                        <div className="flex flex-col items-start p-6 border-b border-gray-200">
-                            <div className="flex flex-col items-start gap-6 w-full">
-                                <img src={logo} alt="Logo" className="w-32 h-8" />
-                                <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2 flex-1">
-                                    <i className="ri-search-line text-gray-400 text-lg"></i>
-                                    <input
-                                        type="text"
-                                        name="search"
-                                        id="search"
-                                        placeholder="Search"
-                                        className="bg-transparent text-gray-800 ml-2 text-sm w-full focus:outline-none placeholder:text-gray-400"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+        <div
+            className={`fixed top-0 left-0 h-full w-72 bg-[#FAF9F8] border-r border-gray-200 transform ${
+                isSidebarVisible ? 'translate-x-0' : '-translate-x-full'
+            } transition-transform duration-300 z-50 sm:translate-x-0 sm:relative sm:block`}
+        >
+            {/* Logo and Search */}
+            <div className="flex flex-col items-start p-6 border-b border-gray-200">
+                <div className="flex flex-col items-start gap-6 w-full">
+                    <img src={logo} alt="Logo" className="w-32 h-8" />
+                    <div className="flex items-center bg-gray-100 rounded-lg px-3 py-2 flex-1">
+                        <i className="ri-search-line text-gray-400 text-lg"></i>
+                        <input
+                            type="text"
+                            name="search"
+                            id="search"
+                            placeholder="Search"
+                            className="bg-transparent text-gray-800 ml-2 text-sm w-full focus:outline-none placeholder:text-gray-400"
+                        />
+                    </div>
+                </div>
+            </div>
 
-                        {/* Main Menu */}
+            {/* Main Menu */}
             <div className="flex-1 overflow-y-auto p-6">
                 <h2 className="text-[#6F7277] text-xs font-semibold mb-4 tracking-widest">MAIN MENU</h2>
                 <div className="">
