@@ -4,6 +4,7 @@ import ProfileImage from '../assets/images/Profile-picture.png';
 
 const TaskBoard = () => {
   const [activeTab, setActiveTab] = useState('Board'); // State to manage active tab
+  const [showActions, setShowActions] = useState(false); // State to toggle filter and sort buttons
 
   const tasks = [
     {
@@ -97,14 +98,35 @@ const TaskBoard = () => {
             {tab}
           </button>
         ))}
+
+        {/* More Icon for Mobile */}
         <div className="ml-auto flex items-center space-x-4">
-          <button className="flex items-center text-gray-500 text-sm">
+          <div className="relative sm:hidden">
+            <i
+              className="ri-more-2-line text-gray-600 text-xl cursor-pointer"
+              onClick={() => setShowActions(!showActions)}
+            ></i>
+            {showActions && (
+              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg p-2">
+                <button className="flex items-center text-gray-500 text-sm mb-2">
+                  <i className="ri-filter-line mr-1"></i> Filter
+                </button>
+                <button className="flex items-center text-gray-500 text-sm">
+                  <i className="ri-sort-asc mr-1"></i> Sort
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Filter and Sort Buttons for Desktop */}
+          <button className="hidden sm:flex items-center text-gray-500 text-sm">
             <i className="ri-filter-line mr-1"></i> Filter
           </button>
-          <button className="flex items-center text-gray-500 text-sm">
+          <button className="hidden sm:flex items-center text-gray-500 text-sm">
             <i className="ri-sort-asc mr-1"></i> Sort
           </button>
         </div>
+        
       </div>
 
       {/* Content Section */}

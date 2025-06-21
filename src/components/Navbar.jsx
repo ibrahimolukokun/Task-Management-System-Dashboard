@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileImage from '../assets/images/Profile-picture.png';
 
 const Navbar = ({ toggleSidebar }) => {
     return (
@@ -32,7 +33,7 @@ const Navbar = ({ toggleSidebar }) => {
 
                 {/* Profile Image */}
                 <div className="w-10 h-10 rounded-full overflow-hidden">
-                    <img src="../assets/images/Profile-picture.png" alt="Profile" className="w-full h-full object-cover" />
+                    <img src={ProfileImage} alt="Profile" className="w-full h-full object-cover" />
                 </div>
             </div>
         </div>
