@@ -1,7 +1,8 @@
 import React from 'react';
 import ProfileImage from '../assets/images/Profile-picture.png';
+import AddTaskModal from './AddTaskModal';
 
-const Navbar = ({ toggleSidebar }) => {
+const Navbar = ({ toggleSidebar, onAddTaskClick  }) => {
     return (
         <div className="flex justify-between items-center bg-[#FAF9F8] px-8 py-4 border-b border-gray-200">
             {/* Left Section: Title */}
@@ -14,14 +15,14 @@ const Navbar = ({ toggleSidebar }) => {
             </div>
 
             {/* Right Section: Actions */}
-            <div className="flex items-center space-x-6">
-                {/* Add Task Button */}
-                <button className="flex items-center bg-none text-[#4E4ECA] rounded-lg px-4 py-2 border hover:text-white hover:bg-[#454589] transition-colors">
-                    <i className="ri-add-line text-lg"></i>
-                    <span className="ml-2 text-sm font-medium">Add Task</span>
-                </button>
+                        <div className="flex items-center space-x-6">
+                            {/* Add Task Button */}
+                            <button className="hidden sm:hidden md:hidden lg:flex items-center bg-none text-[#4E4ECA] rounded-lg px-4 py-2 border hover:text-white hover:bg-[#454589] transition-colors" onClick={onAddTaskClick}>
+                                <i className="ri-add-line text-lg"></i>
+                                <span className="ml-2 text-sm font-medium">Add Task</span>
+                            </button>
 
-                {/* Notifications Icon */}
+                            {/* Notifications Icon */}
                 <div className="relative cursor-pointer">
                     <i className="ri-notification-3-line text-gray-600 text-xl"></i>
                     
