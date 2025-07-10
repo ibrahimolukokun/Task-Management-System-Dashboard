@@ -16,9 +16,7 @@ A task management dashboard inspired by tools like Trello and ClickUp. Built fro
 
 🛠 Tech Stack
 
-HTML5,
-CSS3,
-JavaScript (ES6)
+React.js, TailwindCSS, HTML5, CSS3, JavaScript (ES6)
 
 
 📦 Installation
